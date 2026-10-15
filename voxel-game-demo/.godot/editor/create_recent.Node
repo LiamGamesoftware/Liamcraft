@@ -1,0 +1,12 @@
+CSGBox3D
+CSGMesh3D
+CharacterBody3D
+RichTextLabel
+HFlowContainer
+Container
+SpotLight3D
+OmniLight3D
+AudioStreamPlayer
+AudioStreamPlayer3D
+CSGSphere3D
+DirectionalLight3D

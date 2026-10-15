@@ -1,0 +1,208 @@
+[gd_scene format=3 uid="uid://1s4asqpay67m"]
+
+[ext_resource type="Script" uid="uid://xig352h0s3g7" path="res://player/player.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://s5g2ev3y224" path="res://world/textures/hand.fbx" id="2_rkbax"]
+[ext_resource type="FontFile" uid="uid://cyd3f8x03dspo" path="res://menu/theme/TinyUnicode.ttf" id="3_g1dw6"]
+[ext_resource type="Script" uid="uid://w4f23t68l2nw" path="res://player/rich_text_label_2.gd" id="4_yw30f"]
+[ext_resource type="Texture2D" uid="uid://ofy3fx13c1vd" path="res://menu/New Project (25).png" id="5_g6k8r"]
+[ext_resource type="Script" uid="uid://csvpkvtdbq5hb" path="res://player/background.gd" id="6_boad6"]
+
+[sub_resource type="CylinderShape3D" id="1"]
+height = 1.75
+radius = 0.375
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_jyixh"]
+
+[sub_resource type="GDScript" id="GDScript_rkbax"]
+script/source = "extends Node3D
+
+@export_category(\"Input Actions\")
+@export var action_swing_left : String = \"mouse_click_left\"
+@export var action_swing_right : String = \"mouse_click_right\"
+
+@export_category(\"Minecraft Bobbing & Sway\")
+@export var sway_tilt_amount : float = 0.05
+@export var max_tilt : float = 0.15
+@export var smooth_speed : float = 8.0
+@export var bob_freq : float = 5.0
+@export var bob_amp_x : float = 0.015
+@export var bob_amp_y : float = 0.012
+
+@export_category(\"Swing Animation\")
+@export var swing_speed : float = 6.0
+
+@onready var initial_position : Vector3 = position
+@onready var initial_rotation : Vector3 = rotation
+
+# Tracking variables
+var bob_time : float = 0.0
+var mouse_input : Vector2 = Vector2.ZERO
+var parent_character : CharacterBody3D
+
+# Swing state variables
+var is_swinging : bool = false
+var swing_progress : float = 0.0
+
+func _ready() -> void:
+	# Safely fetch the Player node
+	if get_owner() is CharacterBody3D:
+		parent_character = get_owner()
+
+func _unhandled_input(event: InputEvent) -> void:
+	# 1. Capture Mouse Look for Sway
+	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+		mouse_input = event.relative
+		
+	# 2. Trigger Swing on Configured Inputs (with safety checks)
+	var left_pressed = InputMap.has_action(action_swing_left) and event.is_action_pressed(action_swing_left)
+	var right_pressed = InputMap.has_action(action_swing_right) and event.is_action_pressed(action_swing_right)
+	
+	if left_pressed or right_pressed:
+		if not is_swinging:
+			is_swinging = true
+			swing_progress = 0.0
+
+func _process(delta: float) -> void:
+	var target_pos : Vector3 = initial_position
+	var target_rot : Vector3 = initial_rotation
+	
+	# --- 1. MINECRAFT SWAY & TILT (Camera lag) ---
+	var tilt_x = clamp(-mouse_input.y * sway_tilt_amount, -max_tilt, max_tilt)
+	var tilt_y = clamp(-mouse_input.x * sway_tilt_amount, -max_tilt, max_tilt)
+	
+	target_rot.x += tilt_x
+	target_rot.y += tilt_y
+	
+	# Clear mouse input so it resets when the mouse stops moving
+	mouse_input = Vector2.ZERO
+	
+	# --- 2. MINECRAFT BOBBING (Based on player movement) ---
+	if parent_character:
+		var vel = parent_character.velocity
+		var is_on_floor = parent_character.is_on_floor()
+		
+		if is_on_floor and Vector2(vel.x, vel.z).length() > 0.1:
+			bob_time += delta * bob_freq
+			# Minecraft style distinct up-and-down rhythm
+			target_pos.x += sin(bob_time) * bob_amp_x
+			target_pos.y += abs(sin(bob_time * 1.5)) * bob_amp_y
+		else:
+			bob_time = lerp(bob_time, 0.0, delta * 5.0)
+			
+	# --- 3. EXACT MINECRAFT SWING MATH ---
+	if is_swinging:
+		swing_progress += delta * swing_speed
+		if swing_progress >= 1.0:
+			swing_progress = 0.0
+			is_swinging = false
+			
+		# Treat progress as a 0 to PI radians curve
+		var swing_angle = sin(swing_progress * PI)
+		
+		# Minecraft math: Hand dips down, forwards, and rotates inward sharply
+		target_pos.x -= swing_angle * 0.05
+		target_pos.y -= swing_angle * 0.08
+		target_pos.z -= swing_angle * 0.05
+		
+		target_rot.x += swing_angle * 0.3
+		target_rot.y -= swing_angle * 0.4
+		target_rot.z -= swing_angle * 0.2
+		
+	# --- 4. APPLY TRANSFORM WITH SMOOTH LAG ---
+	position = position.lerp(target_pos, delta * smooth_speed)
+	rotation.x = lerp_angle(rotation.x, target_rot.x, delta * smooth_speed)
+	rotation.y = lerp_angle(rotation.y, target_rot.y, delta * smooth_speed)
+	rotation.z = lerp_angle(rotation.z, target_rot.z, delta * smooth_speed)
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g1dw6"]
+
+[sub_resource type="AtlasTexture" id="2"]
+atlas = SubResource("CompressedTexture2D_g1dw6")
+region = Rect2(0, 0, 64, 64)
+
+[node name="Player" type="CharacterBody3D" unique_id=329007814]
+collision_layer = 0
+script = ExtResource("1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=396742029]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0)
+shape = SubResource("1")
+
+[node name="Head" type="Node3D" parent="." unique_id=1244302101]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=906448150]
+attributes = SubResource("CameraAttributesPractical_jyixh")
+fov = 74.0
+near = 0.02
+far = 1000.0
+
+[node name="hand" parent="Head/Camera3D" unique_id=111191232 instance=ExtResource("2_rkbax")]
+transform = Transform3D(-0.04444306, 0.020776521, -0.029237423, -0.037970085, -0.046543043, 0.014980016, -0.021738542, 0.038819134, 0.033608872, 0.22474143, -0.08959794, -0.4107313)
+script = SubResource("GDScript_rkbax")
+action_swing_left = ""
+action_swing_right = ""
+bob_amp_x = 0.175
+bob_amp_y = 0.175
+
+[node name="RayCast3D" type="RayCast3D" parent="Head" unique_id=1167152685]
+target_position = Vector3(0, 0, -4)
+
+[node name="SelectedBlock" type="TextureRect" parent="." unique_id=1049051338]
+texture_filter = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -127.0
+offset_top = -127.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = SubResource("2")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1846959733]
+offset_right = 520.0
+offset_bottom = 74.0
+theme_override_fonts/normal_font = ExtResource("3_g1dw6")
+theme_override_font_sizes/normal_font_size = 30
+text = "BEYLANCRAFT VERSION 0.0 INDEV
+LIAM GAMES LTD. DO NOT REDISTRIBUTE!"
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=335938443]
+offset_top = 44.0
+offset_right = 520.0
+offset_bottom = 74.0
+theme_override_fonts/normal_font = ExtResource("3_g1dw6")
+theme_override_font_sizes/normal_font_size = 30
+text = "FPS"
+scroll_active = false
+script = ExtResource("4_yw30f")
+
+[node name="Background" type="TextureRect" parent="." unique_id=900894336]
+texture_filter = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_g6k8r")
+stretch_mode = 1
+script = ExtResource("6_boad6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Background" unique_id=1318742153]
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+theme_override_fonts/normal_font = ExtResource("3_g1dw6")
+theme_override_font_sizes/normal_font_size = 200
+bbcode_enabled = true
+text = "[wave] Loading..."
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1

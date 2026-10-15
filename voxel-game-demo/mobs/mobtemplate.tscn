@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bnds3u06pbi3r"]
+
+[ext_resource type="Script" uid="uid://33e6jerktf38" path="res://mobs/mob.gd" id="1_bfp2h"]
+
+[node name="Mobtemplate" type="Node3D" unique_id=981496512]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1107338754]
+script = ExtResource("1_bfp2h")
+temperament = 0
+maximum_health = 10.0
+can_attack = false
