@@ -1,0 +1,44 @@
+[gd_scene format=4 uid="uid://6nce0eo0jkf3"]
+
+[ext_resource type="Material" uid="uid://b3xnjnpb53hb8" path="res://multiplayer/steve.tres" id="1_o2704"]
+[ext_resource type="Material" uid="uid://cvtpa5oojjkft" path="res://world/textures/hand.tres" id="2_huhue"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ar33x"]
+_surfaces = [{
+"aabb": AABB(-0.01, -0.01, 0, 0.02, 0.02, 0.05290016),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwABAAAAAgAEAAAAAQADAAUABQACAAEABgAEAAIAAgAFAAYABwAAAAQAAAAHAAMABAAGAAcABQADAAcABwAGAAUA"),
+"name": "hand",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("CtcjPArXIzwAAAAACtcjvArXIzwAAAAACtcjvArXI7wAAAAACtcjvArXIzzXrVg9CtcjPArXI7wAAAAACtcjvArXI7zXrVg9CtcjPArXI7zXrVg9CtcjPArXIzzXrVg9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_eso2c"]
+resource_name = "Plane"
+_surfaces = [{
+"aabb": AABB(-0.01, -0.01, 0, 0.02, 0.02, 0.05290016),
+"attribute_data": PackedByteArray("oR4wP3j3Pz+hHjA/ePdPP6EeID94908/oR4gP3j3Pz8P8x8/ZtpPPzEtED9m2k8/MS0QP4oUQD8P8x8/ihRAP2PwPz9e3k8/keY/PzstgD+wnTA/riuAP4KnMD9G208/xJkwP8IDUD82kDA/BDN/PyOTID/HL38/spwgP4YAUD+ynCA/hgBQPyOTID/HL38/EpYQP4osfz+gnxA/SP1PP6CfED9I/U8/EpYQP4osfz//mAA/TSl/P42iAD8M+k8/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": ExtResource("2_huhue"),
+"name": "hand",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("CtcjPArXIzwAAAAACtcjvArXIzwAAAAACtcjvArXI7wAAAAACtcjPArXI7wAAAAACtcjPArXIzzXrVg9CtcjPArXI7zXrVg9CtcjvArXI7zXrVg9CtcjvArXIzzXrVg9CtcjPArXIzzXrVg9CtcjPArXIzwAAAAACtcjPArXI7wAAAAACtcjPArXI7zXrVg9CtcjvArXI7zXrVg9CtcjvArXI7wAAAAACtcjvArXIzwAAAAACtcjvArXIzzXrVg9CtcjvArXIzzXrVg9CtcjvArXIzwAAAAACtcjPArXIzwAAAAACtcjPArXIzzXrVg9CtcjPArXI7zXrVg9CtcjPArXI7wAAAAACtcjvArXI7wAAAAACtcjvArXI7zXrVg9//////9//////////3//////////f/////////9/////f/9//3////9//3//f////3//f/9/////f/9//3///////3//f/T/////f/9/9P////9//3/0/////3//f/T/AAD/f/9/C4AAAP9//38LgAAA/3//fwuAAAD/f/9/C4D/f///FwD/v/9///8XAP+//3///xcA/7//f///FwD/v/9/AADn//+//38AAOf//7//fwAA5///v/9/AADn//+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ar33x")
+
+[node name="hand" type="Node3D" unique_id=381202867]
+
+[node name="Plane" type="MeshInstance3D" parent="." unique_id=1515029762]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+material_override = ExtResource("1_o2704")
+mesh = SubResource("ArrayMesh_eso2c")
+skeleton = NodePath("")

@@ -1,0 +1,5 @@
+[gd_resource type="InputEventMouseButton" format=3 uid="uid://bpyjwq1415db3"]
+
+[resource]
+device = -1
+button_index = 1

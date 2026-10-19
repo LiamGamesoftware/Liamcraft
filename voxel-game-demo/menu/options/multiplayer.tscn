@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://ceibbxlpaha5i"]
+
+[ext_resource type="Theme" uid="uid://ckax6htygmelo" path="res://menu/theme/theme.tres" id="1_an17v"]
+[ext_resource type="Script" uid="uid://wxfnp77cp41u" path="res://menu/options/options.gd" id="2_npfyr"]
+[ext_resource type="Script" uid="uid://ca438tumyco1e" path="res://multiplayer/multiplayer_menu.gd" id="3_1no8h"]
+[ext_resource type="Texture2D" uid="uid://vov1cyilqhtt" path="res://world/textures/Menu_background_Programmer.png" id="3_ksow1"]
+[ext_resource type="FontFile" uid="uid://cf54p66yc7meg" path="res://mojangles.ttf" id="5_6nlp3"]
+[ext_resource type="Texture2D" uid="uid://ddwojsf1f78i" path="res://menu/button (1).png" id="12_t4w07"]
+[ext_resource type="Texture2D" uid="uid://big11m2teurbc" path="res://menu/button (1) (1).png" id="13_r6qbi"]
+
+[node name="Multiplayer" type="HBoxContainer" unique_id=412681582]
+visible = false
+anchors_preset = -1
+anchor_right = 4.004
+anchor_bottom = 4.5740004
+offset_right = -0.40039063
+offset_bottom = 0.39990234
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_an17v")
+alignment = 1
+script = ExtResource("2_npfyr")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1898503563]
+propagate_maximum_size = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+texture = ExtResource("3_ksow1")
+expand_mode = 3
+stretch_mode = 1
+
+[node name="Multiplayer" type="Control" parent="." unique_id=1535714709]
+layout_mode = 2
+script = ExtResource("3_1no8h")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Multiplayer" unique_id=2025911103]
+layout_mode = 0
+offset_left = -388.0
+offset_right = -4.0
+offset_bottom = 4117.0
+alignment = 1
+
+[node name="Back" type="TextureButton" parent="Multiplayer/HBoxContainer" unique_id=1741204447]
+layout_mode = 2
+texture_normal = ExtResource("12_t4w07")
+texture_pressed = ExtResource("13_r6qbi")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Multiplayer/HBoxContainer/Back" unique_id=375569149]
+layout_mode = 0
+offset_left = 6329.0
+offset_top = 2043.0
+offset_right = 6406.0
+offset_bottom = 2074.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.39215687)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("5_6nlp3")
+theme_override_font_sizes/font_size = 30
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1

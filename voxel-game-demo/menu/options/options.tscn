@@ -1,0 +1,209 @@
+[gd_scene format=3 uid="uid://e22n700qhxqr"]
+
+[ext_resource type="Script" uid="uid://wxfnp77cp41u" path="res://menu/options/options.gd" id="1"]
+[ext_resource type="Theme" uid="uid://ckax6htygmelo" path="res://menu/theme/theme.tres" id="1_1y7gy"]
+[ext_resource type="Script" uid="uid://b8dnvf60ltvu6" path="res://menu/options/option_buttons.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://ddwojsf1f78i" path="res://menu/button (1).png" id="4_nh0v0"]
+[ext_resource type="Texture2D" uid="uid://big11m2teurbc" path="res://menu/button (1) (1).png" id="5_kwmgx"]
+[ext_resource type="Texture2D" uid="uid://2lqkufs05ygv" path="res://world/textures/Widget_slider_handle.png" id="5_p6051"]
+[ext_resource type="Texture2D" uid="uid://bymdgr6okiqye" path="res://world/textures/Widget_slider.png" id="6_07bmx"]
+[ext_resource type="Texture2D" uid="uid://vov1cyilqhtt" path="res://world/textures/Menu_background_Programmer.png" id="6_kwmgx"]
+[ext_resource type="FontFile" uid="uid://cf54p66yc7meg" path="res://mojangles.ttf" id="7_i3paj"]
+[ext_resource type="Texture2D" uid="uid://b5v142yxj2e7l" path="res://world/textures/Widget_checkbox.png" id="8_i3paj"]
+[ext_resource type="Texture2D" uid="uid://diy77wjbd1r8x" path="res://world/textures/Widget_checkbox_selected.png" id="9_43j44"]
+[ext_resource type="Script" uid="uid://dgjs824mjtrcl" path="res://menu/options/fcheck.gd" id="10_fl4cp"]
+[ext_resource type="AudioStream" uid="uid://c58mq7xg0fdww" path="res://music/click.ogg" id="12_43j44"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g28q7"]
+texture = ExtResource("6_07bmx")
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n8wo2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5t1r3"]
+
+[node name="Options" type="HBoxContainer" unique_id=412681582]
+visible = false
+anchors_preset = -1
+anchor_right = 4.004
+anchor_bottom = 4.5740004
+offset_right = -0.40039063
+offset_bottom = 0.39990234
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_1y7gy")
+alignment = 1
+script = ExtResource("1")
+
+[node name="Control" type="Control" parent="." unique_id=1535714709]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1395910057]
+propagate_maximum_size = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10412.0
+offset_top = -4096.0
+offset_right = 13345.0
+offset_bottom = 8112.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_kwmgx")
+expand_mode = 3
+stretch_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1328917972]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="OptionsBackground" type="ColorRect" parent="VBoxContainer" unique_id=1946987277]
+self_modulate = Color(0.45098, 0.45098, 0.45098, 1)
+custom_minimum_size = Vector2(1000, 250)
+layout_mode = 2
+color = Color(0.2509804, 0.2509804, 0.2509804, 0)
+
+[node name="OptionButtons" type="GridContainer" parent="VBoxContainer/OptionsBackground" unique_id=2108679233]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -66.0
+offset_right = 400.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 20
+columns = 2
+script = ExtResource("2")
+
+[node name="RenderDistanceLabel" type="Label" parent="VBoxContainer/OptionsBackground/OptionButtons" unique_id=673443740]
+layout_mode = 2
+size_flags_vertical = 5
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.39215687)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("7_i3paj")
+theme_override_font_sizes/font_size = 30
+text = "Render distance: 3"
+horizontal_alignment = 2
+
+[node name="RenderDistanceSlider" type="HSlider" parent="VBoxContainer/OptionsBackground/OptionButtons" unique_id=1246863298]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_icons/grabber = ExtResource("5_p6051")
+theme_override_icons/grabber_highlight = ExtResource("5_p6051")
+theme_override_styles/slider = SubResource("StyleBoxTexture_g28q7")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_n8wo2")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_5t1r3")
+min_value = 3.0
+max_value = 10.0
+value = 7.0
+
+[node name="FOV" type="Label" parent="VBoxContainer/OptionsBackground/OptionButtons" unique_id=1196950014]
+layout_mode = 2
+size_flags_vertical = 5
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.39215687)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("7_i3paj")
+theme_override_font_sizes/font_size = 30
+text = "FOV:"
+horizontal_alignment = 2
+
+[node name="FOVSlide" type="HSlider" parent="VBoxContainer/OptionsBackground/OptionButtons" unique_id=1623396390]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_icons/grabber = ExtResource("5_p6051")
+theme_override_icons/grabber_highlight = ExtResource("5_p6051")
+theme_override_styles/slider = SubResource("StyleBoxTexture_g28q7")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_n8wo2")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_5t1r3")
+min_value = 30.0
+max_value = 120.0
+value = 30.0
+
+[node name="FogLabel" type="Label" parent="VBoxContainer/OptionsBackground/OptionButtons" unique_id=151924248]
+layout_mode = 2
+size_flags_vertical = 5
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.39215687)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("7_i3paj")
+theme_override_font_sizes/font_size = 30
+text = "Sphere Render:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="FogCheckBox" type="CheckBox" parent="VBoxContainer/OptionsBackground/OptionButtons" unique_id=2060327154]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_icons/checked = ExtResource("9_43j44")
+theme_override_icons/unchecked = ExtResource("8_i3paj")
+
+[node name="Fulllabled" type="Label" parent="VBoxContainer/OptionsBackground/OptionButtons" unique_id=1309610532]
+layout_mode = 2
+size_flags_vertical = 5
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.39215687)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("7_i3paj")
+theme_override_font_sizes/font_size = 30
+text = "Fullscreen:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Fullbox" type="CheckBox" parent="VBoxContainer/OptionsBackground/OptionButtons" unique_id=1407928082]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_icons/checked = ExtResource("9_43j44")
+theme_override_icons/unchecked = ExtResource("8_i3paj")
+script = ExtResource("10_fl4cp")
+
+[node name="Clickhere" type="AudioStreamPlayer" parent="VBoxContainer/OptionsBackground" unique_id=982444120]
+stream = ExtResource("12_43j44")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=800676104]
+layout_mode = 2
+alignment = 1
+
+[node name="Back" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=1090443972]
+layout_mode = 2
+texture_normal = ExtResource("4_nh0v0")
+texture_pressed = ExtResource("5_kwmgx")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Back" unique_id=282756136]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_i3paj")
+theme_override_font_sizes/font_size = 30
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=1111026347]
+stream = ExtResource("12_43j44")
+
+[connection signal="value_changed" from="VBoxContainer/OptionsBackground/OptionButtons/RenderDistanceSlider" to="VBoxContainer/OptionsBackground/OptionButtons" method="_on_RenderDistanceSlider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/OptionsBackground/OptionButtons/FOVSlide" to="VBoxContainer/OptionsBackground/OptionButtons" method="_on_fov_slide_value_changed"]
+[connection signal="pressed" from="VBoxContainer/OptionsBackground/OptionButtons/FogCheckBox" to="VBoxContainer/OptionsBackground/OptionButtons" method="_on_FogCheckBox_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionsBackground/OptionButtons/Fullbox" to="VBoxContainer/OptionsBackground/OptionButtons" method="_on_fullbox_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Back" to="." method="_on_Back_pressed"]

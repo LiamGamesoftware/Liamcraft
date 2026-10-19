@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://blnoysskburb3"]
+
+[ext_resource type="Texture2D" uid="uid://0dtxva1ujub0" path="res://mobs/models/boar_(texture)_JE2.png" id="1_akfm7"]
+
+[resource]
+disable_specular_occlusion = true
+albedo_texture = ExtResource("1_akfm7")
+texture_filter = 0

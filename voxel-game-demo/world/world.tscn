@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://3wtpjm677uyk"]
+
+[ext_resource type="PackedScene" uid="uid://1s4asqpay67m" path="res://player/player.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bxnkcor0m0n37" path="res://world/voxel_world.gd" id="2"]
+[ext_resource type="Script" uid="uid://bg6nmo22nkxl6" path="res://world/environment.gd" id="4"]
+[ext_resource type="PackedScene" uid="uid://dk8arl1if3lyr" path="res://menu/ingame/pause_menu.tscn" id="5"]
+[ext_resource type="Script" uid="uid://ch2tbbbi116po" path="res://menu/debug.gd" id="6"]
+[ext_resource type="Texture2D" uid="uid://dkfkyeth212cl" path="res://world/textures/New Project (27).png" id="6_mad0u"]
+[ext_resource type="Theme" uid="uid://ckax6htygmelo" path="res://menu/theme/theme.tres" id="7"]
+[ext_resource type="Texture2D" uid="uid://c4m1do0ea5ot0" path="res://world/textures/images.jpg" id="7_ocfjn"]
+[ext_resource type="Material" uid="uid://b1att25x4wh1k" path="res://world/textures/shinyballsack.tres" id="7_sc4t8"]
+[ext_resource type="PackedScene" uid="uid://hdm04ws7nc45" path="res://mobs/boar.tscn" id="8_4papg"]
+[ext_resource type="PackedScene" uid="uid://bjsdmqfkjssbd" path="res://mobs/cow.tscn" id="8_ai45w"]
+[ext_resource type="AudioStream" uid="uid://cd252wstnyyv1" path="res://music/actualmusic/krnbeatz-echo-of-the-void-422714.mp3" id="8_dqqhb"]
+[ext_resource type="PackedScene" uid="uid://ccoddsdjs1emv" path="res://mobs/caretaker.tscn" id="13_ocfjn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g4v7s"]
+albedo_color = Color(0.6392157, 1, 1, 1)
+emission_enabled = true
+emission_on_uv2 = true
+emission_texture = ExtResource("6_mad0u")
+rim_enabled = true
+rim = 0.14
+rim_texture = ExtResource("7_ocfjn")
+heightmap_enabled = true
+heightmap_scale = 16.0
+heightmap_texture = ExtResource("6_mad0u")
+backlight = Color(0.54901963, 0, 1, 1)
+refraction_scale = 1.0
+refraction_texture = ExtResource("7_ocfjn")
+detail_enabled = true
+detail_mask = ExtResource("6_mad0u")
+detail_blend_mode = 1
+uv2_scale = Vector3(13, 13, 13)
+uv2_triplanar = true
+uv2_triplanar_sharpness = 2.8284268
+uv2_world_triplanar = true
+texture_filter = 5
+disable_receive_shadows = true
+billboard_mode = 2
+billboard_keep_scale = true
+distance_fade_mode = 2
+distance_fade_max_distance = 0.05
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ai45w"]
+sky_top_color = Color(0.627, 0.886, 0.925, 1)
+sky_horizon_color = Color(0.627, 0.886, 0.925, 1)
+sky_curve = 0.07244565
+ground_bottom_color = Color(0.627, 0.886, 0.925, 1)
+ground_horizon_color = Color(0.627, 0.886, 0.925, 1)
+sun_angle_max = 0.0
+sun_curve = 1e-05
+
+[sub_resource type="Sky" id="Sky_heg3k"]
+sky_material = SubResource("ProceduralSkyMaterial_ai45w")
+radiance_size = 0
+
+[sub_resource type="Environment" id="Environment_lwytn"]
+background_mode = 2
+sky = SubResource("Sky_heg3k")
+ambient_light_source = 2
+ambient_light_color = Color(0.8346143, 0.8346143, 0.8346143, 1)
+ambient_light_energy = 0.1
+tonemap_mode = 1
+ssao_radius = 6.8
+ssao_intensity = 16.0
+fog_enabled = true
+fog_light_color = Color(0.627451, 0.8862745, 0.9254902, 1)
+fog_density = 0.0236
+fog_sky_affect = 0.5
+adjustment_enabled = true
+adjustment_saturation = 0.78
+
+[node name="World3D" type="Node3D" unique_id=742344013]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=128938839]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_specular = 0.0
+light_bake_mode = 0
+sky_mode = 1
+
+[node name="Player" parent="." unique_id=1510782249 instance=ExtResource("1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 215.82352, 0)
+
+[node name="Debug" type="Label" parent="." unique_id=2100991153]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("7")
+theme_override_font_sizes/font_size = 48
+script = ExtResource("6")
+
+[node name="PauseMenu" parent="." unique_id=1419836301 instance=ExtResource("5")]
+
+[node name="VoxelWorld" type="Node" parent="." unique_id=1714569932]
+script = ExtResource("2")
+
+[node name="holopurple" type="CSGSphere3D" parent="VoxelWorld" unique_id=1404846951]
+physics_interpolation_mode = 1
+transform = Transform3D(0.115754426, 0.07501663, -0.99044096, -0.31673038, 0.94787776, 0.034775883, 0.9414259, 0.30967727, 0.13348126, 0.34585214, 3.3583024, -351.7026)
+use_collision = true
+radius = 0.6889039
+radial_segments = 31
+rings = 12
+material = SubResource("StandardMaterial3D_g4v7s")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="VoxelWorld/holopurple" unique_id=1369565419]
+stream = ExtResource("8_dqqhb")
+attenuation_model = 1
+volume_db = 1.0
+unit_size = 5.61
+autoplay = true
+parameters/looping = true
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="VoxelWorld" unique_id=588810463]
+physics_interpolation_mode = 1
+transform = Transform3D(-0.70791566, -0.36557907, 0.6043237, -0.10128978, 0.8993262, 0.4253851, -0.69899595, 0.23992491, -0.6736769, -0.08220056, 0.30734444, 0.01421538)
+use_collision = true
+radius = 0.6889039
+radial_segments = 31
+rings = 12
+material = ExtResource("7_sc4t8")
+
+[node name="Environment" type="WorldEnvironment" parent="." unique_id=791856943]
+environment = SubResource("Environment_lwytn")
+script = ExtResource("4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=839596921]
+
+[node name="cow" parent="." unique_id=981496512 instance=ExtResource("8_4papg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 239.67984, 0)
+
+[node name="cow2" parent="." unique_id=214886655 instance=ExtResource("8_ai45w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 239.67984, 0)
+
+[node name="boar" parent="." unique_id=1474418902 instance=ExtResource("13_ocfjn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -158.09477, 195.59659, 108.44288)
+
+[node name="SubViewport" type="Node3D" parent="." unique_id=1072215532]

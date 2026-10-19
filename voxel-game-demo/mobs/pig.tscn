@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cm4vk24cxtugr"]
+
+[ext_resource type="Script" uid="uid://33e6jerktf38" path="res://mobs/mob.gd" id="1_o0yto"]
+[ext_resource type="Material" uid="uid://bcx028we0c1sv" path="res://mobs/models/pig.tres" id="2_agtiv"]
+[ext_resource type="ArrayMesh" uid="uid://ddin4ee11vwo2" path="res://mobs/models/pig.obj" id="3_acyt0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(1, 1.5135498, 1.6168213)
+
+[node name="pig" type="Node3D" unique_id=981496512]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1107338754 node_paths=PackedStringArray("visual")]
+script = ExtResource("1_o0yto")
+is_prey = true
+visual = NodePath("Model")
+
+[node name="Model" type="MeshInstance3D" parent="CharacterBody3D" unique_id=1234107421]
+material_override = ExtResource("2_agtiv")
+cast_shadow = 0
+mesh = ExtResource("3_acyt0")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=458198633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.76279026, -0.11444092)
+shape = SubResource("BoxShape3D_g4v7s")
+debug_color = Color(0.98517126, 0.11941048, 3.85046e-07, 0.41960785)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="CharacterBody3D" unique_id=1121672955]
