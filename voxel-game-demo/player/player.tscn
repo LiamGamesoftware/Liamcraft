@@ -4,7 +4,8 @@
 [ext_resource type="Script" uid="uid://ddraq56doeo64" path="res://player/head.gd" id="2_2ieo8"]
 [ext_resource type="Script" uid="uid://d3t21cq6msoxm" path="res://player/camera_3dfov.gd" id="3_boad6"]
 [ext_resource type="Texture2D" uid="uid://vov1cyilqhtt" path="res://world/textures/Menu_background_Programmer.png" id="4_8t03j"]
-[ext_resource type="PackedScene" uid="uid://0ldjb0cj2oyl" path="res://multiplayer/playermdl.tscn" id="5_rgyib"]
+[ext_resource type="PackedScene" uid="uid://cxgybx0smtbkf" path="res://multiplayer/playermdl.tscn" id="5_rgyib"]
+[ext_resource type="Script" uid="uid://dkfvo678xssdv" path="res://player/hand.gd" id="6_8t03j"]
 [ext_resource type="Script" uid="uid://csvpkvtdbq5hb" path="res://player/background.gd" id="6_boad6"]
 [ext_resource type="FontFile" uid="uid://cf54p66yc7meg" path="res://mojangles.ttf" id="6_g6k8r"]
 [ext_resource type="PackedScene" uid="uid://owvylr12mcws" path="res://multiplayer/playermdlhead.tscn" id="6_hg6s5"]
@@ -51,12 +52,16 @@ script = ExtResource("3_boad6")
 
 [node name="hand" parent="Head/Camera3D" unique_id=381202867 instance=ExtResource("8_rgyib")]
 transform = Transform3D(-0.035844747, 0.031047553, -0.030834774, -0.03985283, -0.049026847, 0, -0.031159364, 0.026989225, 0.03547135, 0.2251418, -0.059477687, -0.41647217)
+script = ExtResource("6_8t03j")
+sway_amount = 0.2
+bob_amount = 0.05
+bob_speed = 11.845
 
 [node name="head" parent="Head/Camera3D" unique_id=2056317804 instance=ExtResource("6_hg6s5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1261462, 0)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="Head/Camera3D/head" unique_id=1205803821]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.00014179945, -0.1737932, -0.0011382997)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.00014179945, -0.044202805, 0.25232166)
 shape = SubResource("SeparationRayShape3D_g4v7s")
 spring_length = 2.0
 

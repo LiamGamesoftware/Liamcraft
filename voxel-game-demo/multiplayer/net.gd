@@ -30,7 +30,7 @@ const EDIT_BATCH_INTS := 8000           # block edits per message (4 ints each),
 
 # Adjust these two paths to match your project.
 const WORLD_SCENE := "res://world/world.tscn"
-const MENU_SCENE := "res://menu/main/main_menu.tscn"
+const MENU_SCENE := "res://main_menu.tscn"
 
 # Where the lobby server is. Leave empty to auto-detect: when the game page is served by
 # lobby_server.js the lobby is simply the same address. If the page lives somewhere else
@@ -42,7 +42,7 @@ const LOCAL_LOBBY_URL := "ws://127.0.0.1:8080"
 # needed and being unreachable is harmless. Tests set this to [].
 var ice_servers: Array = [{"urls": ["stun:stun.l.google.com:19302"]}]
 
-var lobby
+var lobby: LobbyClient
 var lobby_url := ""
 
 var player_name := "Player"
@@ -82,11 +82,7 @@ func _ready() -> void:
 	player_name = _default_player_name()
 	lobby_url = default_lobby_url()
 
-	var lobby_script = load("res://multiplayer/lobby_client.gd")
-	if lobby_script == null:
-		push_error("Could not load res://multiplayer/lobby_client.gd")
-		return
-	lobby = lobby_script.new()
+	lobby = LobbyClient.new()
 	lobby.name = "LobbyClient"
 	add_child(lobby)
 	lobby.connected.connect(_on_lobby_connected)
@@ -148,7 +144,7 @@ func open_world(p_world_name := "") -> void:
 	if lobby.is_open():
 		_send_host_request()
 		return
-	var err: int = lobby.connect_to_lobby(lobby_url)
+	var err := lobby.connect_to_lobby(lobby_url)
 	if err != OK:
 		_host_requested = false
 		host_failed.emit("Could not start the lobby connection (error %d). Check the lobby address." % err)
@@ -168,7 +164,7 @@ func _on_lobby_hosted(room_id: String) -> void:
 		return
 	_host_requested = false
 	_rtc = WebRTCMultiplayerPeer.new()
-	var err: int = _rtc.create_server()
+	var err := _rtc.create_server()
 	if err != OK:
 		_rtc = null
 		lobby.leave_room()
@@ -230,7 +226,7 @@ func _on_lobby_joined(my_id: int) -> void:
 		return
 	_join_requested = false
 	_rtc = WebRTCMultiplayerPeer.new()
-	var err: int = _rtc.create_client(my_id)
+	var err := _rtc.create_client(my_id)
 	if err != OK:
 		_rtc = null
 		lobby.leave_room()

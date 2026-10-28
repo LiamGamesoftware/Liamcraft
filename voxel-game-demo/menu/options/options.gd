@@ -1,4 +1,4 @@
-extends HBoxContainer
+extends Control
 
 var prev_menu
 @onready var audio_player = $Click

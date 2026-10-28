@@ -8,9 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://ddwojsf1f78i" path="res://menu/button (1).png" id="12_t4w07"]
 [ext_resource type="Texture2D" uid="uid://big11m2teurbc" path="res://menu/button (1) (1).png" id="13_r6qbi"]
 
-[node name="Multiplayer" type="HBoxContainer" unique_id=412681582]
+[node name="Multiplayer" type="Control" unique_id=1314137179]
 visible = false
-anchors_preset = -1
+layout_mode = 3
 anchor_right = 4.004
 anchor_bottom = 4.5740004
 offset_right = -0.40039063
@@ -20,20 +20,10 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("1_an17v")
-alignment = 1
 script = ExtResource("2_npfyr")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1898503563]
-propagate_maximum_size = true
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 2
-texture = ExtResource("3_ksow1")
-expand_mode = 3
-stretch_mode = 1
-
 [node name="Multiplayer" type="Control" parent="." unique_id=1535714709]
-layout_mode = 2
+anchors_preset = 0
 script = ExtResource("3_1no8h")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Multiplayer" unique_id=2025911103]
@@ -66,3 +56,21 @@ theme_override_font_sizes/font_size = 30
 text = "Back"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Container" type="Container" parent="." unique_id=627861688]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Container" unique_id=1898503563]
+propagate_maximum_size = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+texture = ExtResource("3_ksow1")
+expand_mode = 3
+stretch_mode = 1

@@ -22,6 +22,7 @@ const BLOCK_GRASS = 3
 const BLOCK_CACTUS = 5
 const BLOCK_BRICK = 51
 const BLOCK_SAND = 11
+const BLOCK_REDSAND = 33
 const BLOCK_BARK = 12
 const BLOCK_OBSIDIAN = 21
 const BLOCK_LEAVES = 26
@@ -70,6 +71,19 @@ static var biomes: Array[Dictionary] = [
 		"mountain_multiplier": 0.0,
 		"top_block": BLOCK_SAND,
 		"filler_block": BLOCK_SAND,
+		"filler_depth": 5,
+		"tree_chance": 0.0,
+		"cactus_chance": 0.018,
+	},
+	{
+		"name": "Redsert",
+		"max_value": -0.12,
+		"base_height": -1.0,
+		"plains_amplitude": 3.0,
+		"hill_multiplier": 0.25,
+		"mountain_multiplier": 0.0,
+		"top_block": BLOCK_REDSAND,
+		"filler_block": BLOCK_REDSAND,
 		"filler_depth": 5,
 		"tree_chance": 0.0,
 		"cactus_chance": 0.018,

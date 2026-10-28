@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bqnuimaoepwxr"
+path="res://.godot/imported/2-11. Dreiton.mp3-71687c58823acac02db89d706f6a1064.mp3str"
+
+[deps]
+
+source_file="res://music/actualmusic/2-11. Dreiton.mp3"
+dest_files=["res://.godot/imported/2-11. Dreiton.mp3-71687c58823acac02db89d706f6a1064.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://7y44nmomvtin"]
+
+[ext_resource type="Texture2D" uid="uid://vov1cyilqhtt" path="res://world/textures/Menu_background_Programmer.png" id="1_g4wvt"]
+[ext_resource type="FontFile" uid="uid://cf54p66yc7meg" path="res://mojangles.ttf" id="2_pjc1l"]
+[ext_resource type="Script" uid="uid://dp3sc7h5pr2jl" path="res://credits.gd" id="3_j6beo"]
+[ext_resource type="Texture2D" uid="uid://cxsj6x3nj2wl3" path="res://menu/liamtek (1) (1).png" id="4_j6beo"]
+[ext_resource type="Texture2D" uid="uid://bn0eg8prnqe7s" path="res://menu/Liam Games 3.png" id="5_4av4j"]
+
+[node name="Credits" type="Control" unique_id=955168987]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="." unique_id=1968801832]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 418.0
+offset_top = 3506.0
+offset_right = 458.0
+offset_bottom = 3546.0
+script = ExtResource("3_j6beo")
+speed = 100.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1676110144]
+propagate_maximum_size = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10830.0
+offset_top = -7402.0
+offset_right = 12927.0
+offset_bottom = 4806.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_g4wvt")
+expand_mode = 3
+stretch_mode = 1
+
+[node name="credits" type="Label" parent="Control" unique_id=1381113961]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -2875.0
+offset_right = 1025.0
+offset_bottom = -286.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 5
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.39215687)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("2_pjc1l")
+theme_override_font_sizes/font_size = 30
+text = "LIAM GAMES
+- Founder & Chief Executive Officer — Liam
+- Executive Creative Director — Liam
+- Chief Technology Officer — Liam
+- Chief Operating Officer — Liam
+- Director of Studio Operations — Liam
+
+
+- Lead Creative Director — Liam
+- Senior Game Director — Liam
+- Director of Game Design — Liam
+- Principal Systems Designer — Liam
+- Lead Gameplay Designer — Liam
+- Senior Narrative Designer — Liam
+- Director of Worldbuilding — Liam
+- Art Director — Liam
+- Lead Visual Designer — Liam
+
+
+- Senior Software Engineer — Liam
+- Principal Gameplay Engineer — Liam
+- Lead Systems Engineer — Liam
+- Director of Software Architecture — Liam
+- Senior Engine Programmer — Liam
+- Lead Technical Engineer — Liam
+- Director of Technical Development — Liam
+- Build & Deployment Engineer — Liam
+
+
+- Director of Visual Production — Liam
+- Senior 3D Artist — Liam
+- Lead Environment Artist — Liam
+- Technical Artist — Liam
+- Director of Asset Production — Liam
+- Cinematic Director — Liam
+- Lead Animator — Liam
+
+
+- Director of Quality Assurance — Liam
+- Senior QA Engineer — Liam
+- Lead Playtesting Coordinator — Liam
+- Director of Release Management — Liam
+- Production & Scheduling Manager — Liam
+- Senior Build Verification Engineer — Liam
+
+
+
+- Director of Communications — Liam
+- Head of Publishing — Liam
+- Director of Brand Identity — Liam
+- Intellectual Property Manager — Liam
+- Director of Digital Distribution — Liam
+- Head of Community Relations — Liam
+
+---
+
+LIAM GAMES™
+
+*Independent Game Development Studio*
+
+All positions, departments, and executive functions are held by Liam.
+
+© 2026 Liam Games. All rights reserved."
+horizontal_alignment = 1
+script = ExtResource("3_j6beo")
+
+[node name="TextureRect2" type="TextureRect" parent="Control" unique_id=2020731532]
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -88.0
+offset_top = -406.0
+offset_right = 1832.0
+offset_bottom = 634.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = ExtResource("4_j6beo")
+
+[node name="TextureRect3" type="TextureRect" parent="Control" unique_id=1605480370]
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_right = 5260.0
+offset_bottom = 920.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.15, 0.1)
+mouse_filter = 2
+texture = ExtResource("5_4av4j")

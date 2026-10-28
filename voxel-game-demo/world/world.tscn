@@ -13,6 +13,10 @@
 [ext_resource type="PackedScene" uid="uid://bjsdmqfkjssbd" path="res://mobs/cow.tscn" id="8_ai45w"]
 [ext_resource type="AudioStream" uid="uid://cd252wstnyyv1" path="res://music/actualmusic/krnbeatz-echo-of-the-void-422714.mp3" id="8_dqqhb"]
 [ext_resource type="PackedScene" uid="uid://ccoddsdjs1emv" path="res://mobs/caretaker.tscn" id="13_ocfjn"]
+[ext_resource type="AudioStream" uid="uid://il47cnv1ap1d" path="res://music/actualmusic/1-02. Subwoofer Lullaby.mp3" id="14_ysn08"]
+[ext_resource type="AudioStream" uid="uid://b6maxsamlx0gm" path="res://music/actualmusic/1-03. Living Mice.mp3" id="15_m0cxt"]
+[ext_resource type="AudioStream" uid="uid://5gt6ramjchhg" path="res://music/actualmusic/2-08. Aria Math.mp3" id="16_j34ew"]
+[ext_resource type="AudioStream" uid="uid://bqnuimaoepwxr" path="res://music/actualmusic/2-11. Dreiton.mp3" id="17_p2iis"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g4v7s"]
 albedo_color = Color(0.6392157, 1, 1, 1)
@@ -43,11 +47,12 @@ distance_fade_mode = 2
 distance_fade_max_distance = 0.05
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ai45w"]
-sky_top_color = Color(0.627, 0.886, 0.925, 1)
+sky_top_color = Color(0.1506997, 0.577294, 0.99999994, 1)
 sky_horizon_color = Color(0.627, 0.886, 0.925, 1)
-sky_curve = 0.07244565
-ground_bottom_color = Color(0.627, 0.886, 0.925, 1)
-ground_horizon_color = Color(0.627, 0.886, 0.925, 1)
+sky_curve = 0.18467268
+ground_bottom_color = Color(0.627451, 0.8862745, 0.9254902, 1)
+ground_horizon_color = Color(0.627451, 0.8862745, 0.9254902, 1)
+ground_curve = 0.23425391
 sun_angle_max = 0.0
 sun_curve = 1e-05
 
@@ -66,10 +71,19 @@ ssao_radius = 6.8
 ssao_intensity = 16.0
 fog_enabled = true
 fog_light_color = Color(0.627451, 0.8862745, 0.9254902, 1)
-fog_density = 0.0236
-fog_sky_affect = 0.5
+fog_density = 0.0168
+fog_aerial_perspective = 1.0
 adjustment_enabled = true
 adjustment_saturation = 0.78
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_aysyn"]
+shuffle = true
+fade_time = 1.0
+stream_count = 4
+stream_0 = ExtResource("14_ysn08")
+stream_1 = ExtResource("15_m0cxt")
+stream_2 = ExtResource("16_j34ew")
+stream_3 = ExtResource("17_p2iis")
 
 [node name="World3D" type="Node3D" unique_id=742344013]
 
@@ -99,6 +113,8 @@ script = ExtResource("6")
 
 [node name="VoxelWorld" type="Node" parent="." unique_id=1714569932]
 script = ExtResource("2")
+sphere_render_mode = true
+sphere_radius_blocks = 20.0
 
 [node name="holopurple" type="CSGSphere3D" parent="VoxelWorld" unique_id=1404846951]
 physics_interpolation_mode = 1
@@ -142,3 +158,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 239.67984, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -158.09477, 195.59659, 108.44288)
 
 [node name="SubViewport" type="Node3D" parent="." unique_id=1072215532]
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=2090891571]
+stream = SubResource("AudioStreamPlaylist_aysyn")
+autoplay = true

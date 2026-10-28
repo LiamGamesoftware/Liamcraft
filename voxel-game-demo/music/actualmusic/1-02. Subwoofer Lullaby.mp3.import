@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://il47cnv1ap1d"
+path="res://.godot/imported/1-02. Subwoofer Lullaby.mp3-72207c88fca460164feabe694e9a8d77.mp3str"
+
+[deps]
+
+source_file="res://music/actualmusic/1-02. Subwoofer Lullaby.mp3"
+dest_files=["res://.godot/imported/1-02. Subwoofer Lullaby.mp3-72207c88fca460164feabe694e9a8d77.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

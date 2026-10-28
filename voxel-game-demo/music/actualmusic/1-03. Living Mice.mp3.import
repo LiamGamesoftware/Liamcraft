@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6maxsamlx0gm"
+path="res://.godot/imported/1-03. Living Mice.mp3-58cdd39bb5d493278ad92890be23653f.mp3str"
+
+[deps]
+
+source_file="res://music/actualmusic/1-03. Living Mice.mp3"
+dest_files=["res://.godot/imported/1-03. Living Mice.mp3-58cdd39bb5d493278ad92890be23653f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
