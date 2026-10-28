@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://1dihmpgu3vff"]
+
+[ext_resource type="Texture2D" uid="uid://b14f0aj45nfjl" path="res://mobs/model_0.png" id="1_1bjsx"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+disable_specular_occlusion = true
+albedo_texture = ExtResource("1_1bjsx")
+texture_filter = 0

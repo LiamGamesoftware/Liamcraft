@@ -1,10 +1,10 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1793222397
+::res://::1793227148
 credits.gd::GDScript::8270995453165711777::1792531921::0::1::::<>Control<><>0<>0<><>::
 credits.tscn::PackedScene::2297401345322124817::1792532211::0::1::::<><><>0<>0<><>::uid://vov1cyilqhtt::::res://world/textures/Menu_background_Programmer.png<>uid://cf54p66yc7meg::::res://mojangles.ttf<>uid://dp3sc7h5pr2jl::::res://credits.gd<>uid://cxsj6x3nj2wl3::::res://menu/liamtek (1) (1).png<>uid://bn0eg8prnqe7s::::res://menu/Liam Games 3.png
-default_bus_layout.tres::AudioBusLayout::3315794270318330971::1793138325::0::1::::<><><>0<>0<><>::
+default_bus_layout.tres::AudioBusLayout::3315794270318330971::1793222404::0::1::::<><><>0<>0<><>::
 default_env.tres::Environment::106762120696060718::1767573888::0::1::::<><><>0<>0<><>::
-export_presets.cfg::TextFile::-1::1792627241::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1793227148::0::1::::<><><>0<>0<><>::
 icon.png::CompressedTexture2D::1648658474738225195::1792345604::1792345614::1::::<><><>0<>0<>3ab2f2c63950ccdf06cba74ab25a939a<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
 Minecraft.ttf::FontFile::7097294112840319649::1792325340::1792325340::1::::<><><>0<>0<>435de081b8ed467e95a1fd7b6f58c287<>res://.godot/imported/Minecraft.ttf-b4cc597ac42d1410cc55dc192f0c0e34.fontdata::
 minecraft_title.png::CompressedTexture2D::3872134782055568132::1786487721::1792180977::1::::<><><>0<>0<>dea77ab872077bb09c26bfd4a296c9bc<>res://.godot/imported/minecraft_title.png-1cba10899b0ab377b00dc7841a1fcb65.s3tc.ctex::
@@ -113,16 +113,16 @@ debug.gd::GDScript::5321056935335951416::1792626773::0::1::::<>Label<><>0<>0<><>
 definetly not mojang.png::CompressedTexture2D::8365611195977544985::1792522151::1792522167::1::::<><><>0<>0<>86b0aeb865636250db97f793b4deebe5<>res://.godot/imported/definetly not mojang.png-b3d57d6ca2f0e0b330fc8372ef340d76.ctex::
 Liam Games 3.png::CompressedTexture2D::3350740434806541842::1792530854::1792530855::1::::<><><>0<>0<>aa9dcfcddddcf1ebfcb1a510fbebea64<>res://.godot/imported/Liam Games 3.png-2a440eddd8ad7ea956ac45250fa5c60e.ctex::
 liamtek (1) (1).png::CompressedTexture2D::6424946635075324402::1792530531::1792530531::1::::<><><>0<>0<>e05af6433ca39190b459c9c1f80ca0dd<>res://.godot/imported/liamtek (1) (1).png-0fea1c9a3b752b29a46069c9d9263661.ctex::
-::res://menu/ingame/::1792753674
+::res://menu/ingame/::1793223504
 Crosshair.webp::CompressedTexture2D::7916138725055348114::1792331232::1792331232::1::::<><><>0<>0<>4c54c27fefd0b78497f880838c7d7303<>res://.godot/imported/Crosshair.webp-6e9a53fc37a9022ab664efa694997981.ctex::
 cursor.gd::GDScript::8106916632958506861::1792330960::0::1::::<>TextureRect<><>0<>0<><>::
-cursor.gdshader::Shader::4452585187545100999::1792753674::0::1::::<><><>0<>0<><>::
+cursor.gdshader::Shader::4452585187545100999::1793223504::0::1::::<><><>0<>0<><>::
 pauseclicks.gd::GDScript::2703626087613706536::1792404040::0::1::::<>VBoxContainer<><>0<>0<><>::
 pause_menu.gd::GDScript::8537437916930070515::1792404114::0::1::::<>Control<><>0<>0<><>::
-pause_menu.gdshader::Shader::8812773605387164156::1792753674::0::1::::<><><>0<>0<><>::
+pause_menu.gdshader::Shader::8812773605387164156::1793223504::0::1::::<><><>0<>0<><>::
 pause_menu.tscn::PackedScene::7929305930133028381::1792531246::0::1::::<><><>0<>0<><>::uid://ckax6htygmelo::::res://menu/theme/theme.tres<>uid://e22n700qhxqr::::res://menu/options/options.tscn<>uid://c8inr3a8gh36n::::res://menu/main/blur.gdshader<>uid://b4o4osg1mvog2::::res://menu/ingame/cursor.gdshader<>uid://dtvumctcqmatn::::res://menu/ingame/pause_menu.gd<>uid://cuep4gug3c6f6::::res://world/textures/Crosshair.webp<>uid://dnrby51s17uft::::res://menu/ingame/cursor.gd<>uid://ddwojsf1f78i::::res://menu/button (1).png<>uid://big11m2teurbc::::res://menu/button (1) (1).png<>uid://cf54p66yc7meg::::res://mojangles.ttf<>uid://c58mq7xg0fdww::::res://music/click.ogg
-::res://menu/main/::1792753674
-blur.gdshader::Shader::7106409381037595859::1792753674::0::1::::<><><>0<>0<><>::
+::res://menu/main/::1793223504
+blur.gdshader::Shader::7106409381037595859::1793223504::0::1::::<><><>0<>0<><>::
 camera_pivot.gd::GDScript::3991028202606778254::1792327462::0::1::::<>Node3D<><>0<>0<><>::
 fullscreen.gd::GDScript::6708439231996571975::1792332615::0::1::::<>CheckBox<><>0<>0<><>::
 main_menu.gd::GDScript::8268680015559276151::1792531941::0::1::::<>Control<><>0<>0<><>::
@@ -227,11 +227,11 @@ Floating_trees.ogg.mp3::AudioStreamMP3::2502412225092851371::1792093398::1792322
 krnbeatz-echo-of-the-void-422714.mp3::AudioStreamMP3::5041017008080139188::1792181339::1792322928::1::::<><><>0<>0<>31bf616b79d33e64266a35ecd1f19a6a<>res://.godot/imported/krnbeatz-echo-of-the-void-422714.mp3-b6e607239f04712a3edaeeb59ffd7d6d.mp3str::
 Moog_city_2.ogg.mp3::AudioStreamMP3::7991137071971146282::1792093398::1792322931::1::::<><><>0<>0<>d4939e38a661bd89bf1007ba1632654e<>res://.godot/imported/Moog_city_2.ogg.mp3-833f6817ffe765fc705aa75bfb7c2350.mp3str::
 Mutation.ogg.mp3::AudioStreamMP3::8737916234037628794::1792093399::1792322935::1::::<><><>0<>0<>190abb74367bfe3e10891f4b5ccfad12<>res://.godot/imported/Mutation.ogg.mp3-c735738eaca43df842a5755b2f79fe8c.mp3str::
-::res://player/::1792754093
+::res://player/::1793222435
 background.gd::GDScript::6080522231016529559::1792010729::0::1::::<>TextureRect<><>0<>0<><>::
 blue.tres::StandardMaterial3D::847199546135925253::1792626309::0::1::::<><><>0<>0<><>::
 camera_3d.gd::GDScript::6350825651746601453::1792753674::0::1::::<>RefCounted<><>0<>0<><>::
-camera_3dfov.gd::GDScript::9165458770906397058::1792753675::0::1::::<>Camera3D<><>0<>0<><>::
+camera_3dfov.gd::GDScript::9165458770906397058::1793222435::0::1::::<>Camera3D<><>0<>0<><>::
 crosshair.svg::CompressedTexture2D::5239310716975677976::1767573888::1767573896::1::::<><><>0<>0<>f81c13ce917da70aa8e477426f2729ed<>res://.godot/imported/crosshair.svg-c15896115a8fc4f09948d0fd31ee95e9.ctex::
 green.tres::StandardMaterial3D::2799864841265593853::1792626309::0::1::::<><><>0<>0<><>::
 hand.fbx::PackedScene::38992449421707583::1791929835::1792231146::1::::<><><>0<>0<>a0c3584ba62953330e0a4315ce0f4246<>res://.godot/imported/hand.fbx-a36ce604ecf7d1903bc28e13b4663a40.scn::uid://cvtpa5oojjkft::::res://world/textures/hand.tres
@@ -246,21 +246,21 @@ radio_manager.gd::GDScript::1026024888986448683::1792093588::0::1::::RadioManage
 red.tres::StandardMaterial3D::2990840612630724717::1792626203::0::1::::<><><>0<>0<><>::
 rich_text_label_2.gd::GDScript::1604374817761859652::1792010308::0::1::::<>RichTextLabel<><>0<>0<><>::
 switchcam.tres::InputEventAction::7263137616874621458::1792447440::0::1::::<><><>0<>0<><>::
-::res://web/::1792627240
-index.apple-touch-icon.png::CompressedTexture2D::7096054517224256230::1792627240::1792449725::1::::<><><>0<>0<>3d06124655ae3eff170733edda1ba010<>res://.godot/imported/index.apple-touch-icon.png-939ec69c79bbf504b92ad8ceed469d51.ctex::
-index.icon.png::CompressedTexture2D::3122764279781261184::1792627240::1792449725::1::::<><><>0<>0<>46dea85263529a65b0aec5bd98a7f952<>res://.godot/imported/index.icon.png-c615af856eabc03ca93d51f6a8f07b60.ctex::
-index.png::CompressedTexture2D::5115393125716058097::1792627240::1792023401::1::::<><><>0<>0<>5767a02b8e629ceb218769cd9751c118<>res://.godot/imported/index.png-80964ad67552d78b1e33f58ad16188ff.ctex::
-::res://world/::1792706288
+::res://web/::1793227672
+index.apple-touch-icon.png::CompressedTexture2D::7096054517224256230::1793227313::1792449725::1::::<><><>0<>0<>3d06124655ae3eff170733edda1ba010<>res://.godot/imported/index.apple-touch-icon.png-939ec69c79bbf504b92ad8ceed469d51.ctex::
+index.icon.png::CompressedTexture2D::3122764279781261184::1793227313::1792449725::1::::<><><>0<>0<>46dea85263529a65b0aec5bd98a7f952<>res://.godot/imported/index.icon.png-c615af856eabc03ca93d51f6a8f07b60.ctex::
+index.png::CompressedTexture2D::5115393125716058097::1793227652::1793229029::1::::<><><>0<>0<>5767a02b8e629ceb218769cd9751c118<>res://.godot/imported/index.png-80964ad67552d78b1e33f58ad16188ff.ctex::
+::res://world/::1793223573
 block_particles.gd::GDScript::3167280982416294381::1792107705::0::1::::BlockParticles<>MultiMeshInstance3D<><>0<>0<><>::
 chunk.gd::GDScript::8813069788299331307::1792109628::0::1::::Chunk<>StaticBody3D<><>0<>0<><>::
 environment.gd::GDScript::2872360984611141297::1792007138::0::1::::<>WorldEnvironment<><>0<>0<><>::
 FocusBorder.webp::CompressedTexture2D::8174560341044404203::1792332236::1792446075::1::::<><><>0<>0<>b7d1db32de0b8013f25f92103b1dd2f9<>res://.godot/imported/FocusBorder.webp-40ed8cd6524f45dde37556ce3e02e686.s3tc.ctex::
 paperbox.obj::Mesh::5357422462963023800::1792329988::1792329988::1::::<><><>0<>0<>f379fa7c9c80d3fac5507dfe34a8cea6<>res://.godot/imported/paperbox.obj-18203a6443a70f2b89daba859560b80d.mesh<*>res://.godot/imported/paperbox.obj-18203a6443a70f2b89daba859560b80d.mesh::
-terrain_generator.gd::GDScript::1553070136806044841::1792706288::0::1::::TerrainGenerator<>Resource<><>0<>0<><>::
+terrain_generator.gd::GDScript::1553070136806044841::1793223353::0::1::::TerrainGenerator<>Resource<><>0<>0<><>::
 voxel_world.gd::GDScript::4028212502427594740::1792486207::0::1::::<>Node<><>0<>0<><>::
 world.gd::GDScript::6011148458148149809::1792286118::0::1::::<>RefCounted<><>0<>0<><>::
-world.tscn::PackedScene::2011884834925704938::1792625897::0::1::::<><><>0<>0<><>::uid://1s4asqpay67m::::res://player/player.tscn<>uid://bxnkcor0m0n37::::res://world/voxel_world.gd<>uid://bg6nmo22nkxl6::::res://world/environment.gd<>uid://dk8arl1if3lyr::::res://menu/ingame/pause_menu.tscn<>uid://ch2tbbbi116po::::res://menu/debug.gd<>uid://dkfkyeth212cl::::res://world/textures/New Project (27).png<>uid://ckax6htygmelo::::res://menu/theme/theme.tres<>uid://c4m1do0ea5ot0::::res://world/textures/images.jpg<>uid://b1att25x4wh1k::::res://world/textures/shinyballsack.tres<>uid://hdm04ws7nc45::::res://mobs/boar.tscn<>uid://bjsdmqfkjssbd::::res://mobs/cow.tscn<>uid://cd252wstnyyv1::::res://music/actualmusic/krnbeatz-echo-of-the-void-422714.mp3<>uid://ccoddsdjs1emv::::res://mobs/caretaker.tscn<>uid://il47cnv1ap1d::::res://music/actualmusic/1-02. Subwoofer Lullaby.mp3<>uid://b6maxsamlx0gm::::res://music/actualmusic/1-03. Living Mice.mp3<>uid://5gt6ramjchhg::::res://music/actualmusic/2-08. Aria Math.mp3<>uid://bqnuimaoepwxr::::res://music/actualmusic/2-11. Dreiton.mp3
-::res://world/textures/::1792753674
+world.tscn::PackedScene::2011884834925704938::1793223573::0::1::::<><><>0<>0<><>::uid://1s4asqpay67m::::res://player/player.tscn<>uid://bxnkcor0m0n37::::res://world/voxel_world.gd<>uid://bg6nmo22nkxl6::::res://world/environment.gd<>uid://dk8arl1if3lyr::::res://menu/ingame/pause_menu.tscn<>uid://ch2tbbbi116po::::res://menu/debug.gd<>uid://dkfkyeth212cl::::res://world/textures/New Project (27).png<>uid://ckax6htygmelo::::res://menu/theme/theme.tres<>uid://c4m1do0ea5ot0::::res://world/textures/images.jpg<>uid://b1att25x4wh1k::::res://world/textures/shinyballsack.tres<>uid://hdm04ws7nc45::::res://mobs/boar.tscn<>uid://bjsdmqfkjssbd::::res://mobs/cow.tscn<>uid://cd252wstnyyv1::::res://music/actualmusic/krnbeatz-echo-of-the-void-422714.mp3<>uid://ccoddsdjs1emv::::res://mobs/caretaker.tscn<>uid://il47cnv1ap1d::::res://music/actualmusic/1-02. Subwoofer Lullaby.mp3<>uid://b6maxsamlx0gm::::res://music/actualmusic/1-03. Living Mice.mp3<>uid://5gt6ramjchhg::::res://music/actualmusic/2-08. Aria Math.mp3<>uid://bqnuimaoepwxr::::res://music/actualmusic/2-11. Dreiton.mp3
+::res://world/textures/::1793223504
 120px-Widget_tab_Programmer.webp::CompressedTexture2D::6295170919044148383::1792348104::1792355653::1::::<><><>0<>0<>a261fa88744932381b01e6054d61d468<>res://.godot/imported/120px-Widget_tab_Programmer.webp-5b0a9f713603fc84180fab148ac875b2.ctex::
 ButtonNew.webp::CompressedTexture2D::5673134441642125409::1792332274::1792332274::1::::<><><>0<>0<>9c8cba846d7492a4e645e738804de115<>res://.godot/imported/ButtonNew.webp-3a8396366a7494e8880d10e337b02cef.ctex::
 Crosshair.webp::CompressedTexture2D::6185838640424161621::1792331240::1792331241::1::::<><><>0<>0<>9bd4c1bbd0b2c68780861858af17fe1b<>res://.godot/imported/Crosshair.webp-0f6d7fad0d33dd0fff4ebee9dc096413.ctex::
@@ -268,7 +268,7 @@ GUI_slot.png::CompressedTexture2D::5705925069840327315::1792198577::1792198578::
 hand.tres::StandardMaterial3D::6286942613979769469::1792355655::0::1::::<><><>0<>0<><>::uid://dds3wtf26ldu6::::res://world/textures/Ray_Tracing_(texture) (1) (1).png<>uid://dkfkyeth212cl::::res://world/textures/New Project (27).png
 images.jpg::CompressedTexture2D::6834675139261451399::1791323487::1791726001::1::::<><><>0<>0<>f3a29fce50a98ba392703cbcc7732f25<>res://.godot/imported/images.jpg-b02abc26aca3de149a40a8aa157d3b5a.s3tc.ctex::
 Indent.webp::CompressedTexture2D::4310209454722477878::1792332270::1792332270::1::::<><><>0<>0<>94a8299ec1be47e5aab7eeb58149b6ba<>res://.godot/imported/Indent.webp-9e32af34d3c8f3b41c25638162e60f46.ctex::
-material.tres::StandardMaterial3D::1555756524587983091::1792753674::0::1::::<><><>0<>0<><>::uid://duo0b636c1lsh::::res://world/textures/texture_sheet.png<>uid://c8d66rxypm7nu::::res://world/textures/texture_sheetNM (1).png
+material.tres::StandardMaterial3D::1555756524587983091::1793223504::0::1::::<><><>0<>0<><>::uid://duo0b636c1lsh::::res://world/textures/texture_sheet.png<>uid://c8d66rxypm7nu::::res://world/textures/texture_sheetNM (1).png
 Menu_background_Programmer.png::CompressedTexture2D::1504188634945966949::1792327645::1792327646::1::::<><><>0<>0<>54469e9edf52d4656b6fe159c903d035<>res://.godot/imported/Menu_background_Programmer.png-4d61508a85df5c02c7945464dc7d1d72.ctex::
 minecraft_title (1).png::CompressedTexture2D::4404539650889258650::1792326747::1792355659::1::::<><><>0<>0<>1c3925362798414f153a4657ae5facf6<>res://.godot/imported/minecraft_title (1).png-696d03cf43b2c1a75e0c3c0bc4138f62.ctex::
 minecraft_title.png::CompressedTexture2D::548755718771085340::1792326561::1792355661::1::::<><><>0<>0<>9ee978bb0f222620c7cfd418da735c50<>res://.godot/imported/minecraft_title.png-78c3c3bd78ad140689fba312fee8423d.ctex::
@@ -276,7 +276,7 @@ New Project (27).png::CompressedTexture2D::7872122645011174747::1786496717::1792
 PlayerCapture.exr::CompressedTexture2D::5667104853850227661::1792285686::1792285708::1::::<><><>0<>0<>088942cd6cc925bcb778ae97c1837053<>res://.godot/imported/PlayerCapture.exr-e693d0db5aa2e632d1f16c6be370eb0e.bptc.ctex::
 Ray_Tracing_(texture) (1) (1).png::CompressedTexture2D::7408727751766139195::1791929886::1791929930::1::::<><><>0<>0<>e2a41c95898a04ad496e8961673fdf76<>res://.godot/imported/Ray_Tracing_(texture) (1) (1).png-f33d83e555be6c8d20c888621ac9ee62.s3tc.ctex::
 Scroller.png::CompressedTexture2D::4157634569292090034::1792231505::1792231505::1::::<><><>0<>0<>19600403b94503009be101e674d52c03<>res://.godot/imported/Scroller.png-7091a750df1f4c32dbfa34c55b5c7387.ctex::
-shinyballsack.tres::StandardMaterial3D::4212519636787927418::1792753674::0::1::::<><><>0<>0<><>::uid://c4m1do0ea5ot0::::res://world/textures/images.jpg<>uid://dkfkyeth212cl::::res://world/textures/New Project (27).png
+shinyballsack.tres::StandardMaterial3D::4212519636787927418::1793223504::0::1::::<><><>0<>0<><>::uid://c4m1do0ea5ot0::::res://world/textures/images.jpg<>uid://dkfkyeth212cl::::res://world/textures/New Project (27).png
 texture_sheet.png::CompressedTexture2D::8593461595900438375::1792256533::1792272918::1::::<><><>0<>0<>7a972ed575750759a1d6b6613b501bed<>res://.godot/imported/texture_sheet.png-52286655fc64f0acb01bdaefe1f1bd3e.s3tc.ctex::
 texture_sheetNM (1).png::CompressedTexture2D::7097204856628720606::1791735983::1791923921::1::::<><><>0<>0<>6793e58fee60164701acb3d2258dd100<>res://.godot/imported/texture_sheetNM (1).png-55ee0d9b27b86d8c5a43abeb2c502dc2.s3tc.ctex::
 texture_sheetNM.png::CompressedTexture2D::1698498630235928371::1791726509::1792008402::1::::<><><>0<>0<>27f863b72aeeb0790cf23ca25ada5d07<>res://.godot/imported/texture_sheetNM.png-c551cfbdf913d965aa48841bc39c3518.s3tc.ctex::

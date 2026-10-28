@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bcx028we0c1sv"]
+
+[ext_resource type="Texture2D" uid="uid://iccngy175lwt" path="res://mobs/models/Pig_(texture)_JE2.png" id="1_j2jvv"]
+
+[resource]
+disable_specular_occlusion = true
+albedo_texture = ExtResource("1_j2jvv")
+texture_filter = 0
