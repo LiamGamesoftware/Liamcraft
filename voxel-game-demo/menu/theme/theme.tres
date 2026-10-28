@@ -1,6 +1,0 @@
-[gd_resource type="Theme" format=3 uid="uid://ckax6htygmelo"]
-
-[ext_resource type="FontFile" uid="uid://cf54p66yc7meg" path="res://mojangles.ttf" id="1_sjxh5"]
-
-[resource]
-default_font = ExtResource("1_sjxh5")
